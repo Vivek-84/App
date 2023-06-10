@@ -32,7 +32,7 @@ def mlmodel(request):
         malldistence = int(request.POST['malldistence'])
 
         data = [[type, carpetarea, metrodistence, ecodistence, malldistence]]
-        with open("C://Users//VIVEK//ReInvest//model1.pkl", 'rb') as file:
+        with open('/Vivek-84/App/blob/main/model1.pkl', 'rb') as file:
             model = pickle.load(file)
         res = model.predict(data)
 
