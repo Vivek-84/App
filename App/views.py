@@ -32,7 +32,7 @@ def mlmodel(request):
         malldistence = int(request.POST['malldistence'])
 
         data = [[type, carpetarea, metrodistence, ecodistence, malldistence]]
-        with open('\model1.pkl', 'rb') as file:
+        with open('model1.pkl', 'rb') as file:
             model = pickle.load(file)
         res = model.predict(data)
 
